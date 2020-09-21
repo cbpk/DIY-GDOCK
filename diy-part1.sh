@@ -7,4 +7,4 @@
 #=============================================================
 
 # add passwall
-sed -i '/lienol/ s/Lienol\/openwrt-package/cbpk\/diyop-package/' feeds.conf.default
+# sed -i '/lienol/ s/Lienol\/openwrt-package/cbpk\/diyop-package/' feeds.conf.default
