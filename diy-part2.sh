@@ -15,12 +15,12 @@ sed -i 's/OpenWrt/G-DOCK/g' package/base-files/files/bin/config_generate
 echo 'Rewrite Wifiname'
 sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
-#echo 'Rewrite Banner'
-#rm -rf package/base-files/files/etc/banner
-#cp -f ../banner package/base-files/files/etc/
+echo 'Rewrite Banner'
+rm -rf package/base-files/files/etc/banner
+cp -f $GITHUB_WORKSPACE/banner package/base-files/files/etc/
 
 echo 'Download ServerChan'
-git clone https://github.com/tty228/luci-app-serverchan ../diy/luci-app-serverchan
+git clone https://github.com/tty228/luci-app-serverchan $GITHUB_WORKSPACE/diy/luci-app-serverchan
 
 echo 'Link diy directory'
-ln -s ../../diy ./package/openwrt-packages
+ln -s $GITHUB_WORKSPACE/diy ./package/openwrt-packages
