@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt
+name: SSH2DIY
 
 on:
   repository_dispatch:
@@ -17,12 +17,12 @@ on:
 #  push:
 #    branches:
 #      - main
-#    paths:
-#      - '.config'
+    paths:
+      - '.github/workflows/SSH2DIY.yml'
 #  schedule:
 #    - cron: 0 8 * * 5
-  watch:
-    types: started
+#  watch:
+#    types: started
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt.git
