@@ -11,18 +11,9 @@
 name: SSH2DIY
 
 on:
-  repository_dispatch:
-#  release:
-#    types: published
-#  push:
-#    branches:
-#      - main
+  push:
     paths:
-      - '.SSH2DIY'
-#  schedule:
-#    - cron: 0 8 * * 5
-#  watch:
-#    types: started
+    - '.SSH2DIY'
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt.git
